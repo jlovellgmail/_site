@@ -1,98 +1,69 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-	<script type="text/javascript" src="jquery.js"></script>
-	<link rel="stylesheet" href="style_JL.css" type="text/css" media="all">
-	<script type="text/javascript" src="page-JL.js"></script>
+	<meta charset=utf-8 />
+	<meta name="description" content="description">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>Jack Lovell</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+	<link rel="stylesheet" type="text/css" media="screen" href="style-slideshow.css"/>
+	<script src="jquery-1.7.1.min.js"></script>
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
-<body>
+<body>   
+	<div id="container">
+		<div class="nav" style="visibility:hidden;">
+			<ul>
+				<li class="name" style="text-align:right;">
+					<div class="noselect">Jack Lovell</div>
+					<div class="contactinfo2">
+						<div class="cline"><a href="mailto:jacklovell@gmail.com">jacklovell@gmail.com</a></div>
+						<div class="cline"><a href="tel:+1-646-331-2234">(646) 331-2234</a></div>
+					</div>
+				</li>
+				<li class="topitem"><a href="drawings.html">Drawings</a></li>
+				<li><a href="graphic_design.html">Graphic Design</a></li>
+				<li><a href="software.html">Software</a></li>
 
-
-	<!-- --------------------------------------------------- -->
-	<div class="namegroup">
-		<a href="index.html" class="name">
-			Jack Lovell
-		</a>
-		<a href="contact.html" class="contact">contact</a>
+			</ul>
+		</div>
 	</div>
 	<!-- --------------------------------------------------- -->
-	<div class="contactinfo">
-		San Diego, CA<br>
-		jacklovell@gmail.com<br>
-		646-331-2234<br>
-	</div>
+	<script>
+		// stop the menu from jumping around when it loads
+		var item_width = 362;
+		var offset = 10;
+		var columnWidth = item_width + offset;
+		var containerWidth = $(window).width();
+		var columns = Math.floor( (containerWidth + offset) / columnWidth );
+		var nav = $(".nav");
+		nav.width((columns * columnWidth) + "px");
+		nav.css("visibility", "visible");
+	</script>
+	<!-- --------------------------------------------------- -->
+	<script type="text/javascript" src="jquery.wookmark.js"></script>
+	<script type="text/javascript">
+		$(window).on("load", function() {
+			var height = document.getElementById("id-contentcontainer").clientHeight;			
+			$('#myContent li').wookmark({itemWidth: 362});
+		});		
+		window.onresize = function(event) {
+			$('#myContent li').wookmark({itemWidth: 362});
 
+			// add this because I removed the nav width sizing from the wookmark file
+			// same as above
+			var item_width = 362;
+			var offset = 10;
+			var columnWidth = item_width + offset;
+			var containerWidth = $(window).width();
+			var columns = Math.floor( (containerWidth + offset) / columnWidth );
+			var nav = $(".nav");
+			nav.width((columns * columnWidth) + "px");
 
-
-	<div class="hidden">
-		<img src="images/Racing Dreams - key art_1000.jpg"> 
-		<img src="images/rd 340w.jpg">
-		<img src="images/vegucated_poster_1000.jpg">
-		<img src="images/vegucated 340w.jpg">
-		<img src="images/OTL 1000w.jpg">
-		<img src="images/OTL 340w.jpg">
-		<img src="images/Skinny Dip poster - PROOF_50pcnt.jpg">
-		<img src="images/skinnydip 340w.jpg">
-		<img src="images/fayum_1000.jpg"> 
-		<img src="images/fayum_340.jpg">
-		<img src="images/hersheys_1200.jpg" >
-		<img src="images/hersheys_340.jpg">
-		<img src="images/aramark combo.jpg" >
-		<img src="images/aramark purple_340.jpg">
-		<img src="images/ice cubes.jpg" >
-		<img src="images/ice cubes_340.jpg">
-		<img src="images/reeses.jpg" >
-		<img src="images/reeses_340.jpg">
-		<img src="images/rd presentation page.jpg" >
-		<img src="images/rd presentation page_450.jpg">
-		<img src="images/zoo.jpg" >
-		<img src="images/zoo_340.jpg">
-		<img src="images/gracie poster.jpg">
-		<img src="images/gracie poster_340.jpg">
-		<img src="images/yaddo_1200.jpg" >
-		<img src="images/yaddo_340.jpg">
-		<img src="images/super positions_1200.jpg" >
-		<img src="images/super positions_340.jpg">
-		<img src="images/take shelter screenshot.jpg" >
-		<img src="images/take shelter screenshot_450.jpg">
-		<img src="images/twizzlers combo.jpg">
-		<img src="images/twizzlers2_340.jpg">
-		<img src="images/GG infographic_1200.jpg">
-		<img src="images/GG infographic_340.jpg">
-		<img src="images/beautifulboy.jpg">
-		<img src="images/beautifulboy_450.jpg">
-		<img src="images/johnny_shot.jpg">
-		<img src="images/johnny_shot_400.jpg">
-		<img src="images/greater_kudu.jpg">
-		<img src="images/greater_kudu_340.jpg">
-		<img src="images/Smith House.jpg">
-		<img src="images/Smith House_340.jpg">
-		<img src="images/golf.jpg">
-		<img src="images/golf_340.jpg">
-		<img src="images/flute.jpg">
-		<img src="images/flute_340.jpg">
-		<img src="images/blogher 2012 - OutB.jpg">
-		<img src="images/blogher 2012 - OutB_400.jpg">
-		<img src="images/bronxboys.jpg">
-		<img src="images/bronxboys_400.jpg">
-		<img src="images/oysters permissive.jpg">
-		<img src="images/oysters permissive_400.jpg">
-		<img src="images/whitney brown.jpg">
-		<img src="images/whitney brown_400.jpg">
-		<img src="images/yo gabba gabba.jpg">
-		<img src="images/yo gabba gabba_340.jpg">
-		<img src="images/fallingwater_1200.jpg">
-		<img src="images/fallingwater_340.jpg">
-		<img src="images/otoole cropped.jpg">
-	</div>
-
-
+		}
+	</script>
+	<!-- --------------------------------------------------- -->
 </body>
 </html>
-
-
-
-
-
-
-
