@@ -73,6 +73,7 @@ $.fn.wookmark = function(options) {
   if(containerWidth < 390) containerWidth = 390;
 
   var columns = Math.floor((containerWidth+options.offset)/columnWidth);
+  columns = Math.min(columns, 4);
   var offset = Math.round((containerWidth - (columns*columnWidth-options.offset))/2);
   
   // Prepare Array to store height of columns.
