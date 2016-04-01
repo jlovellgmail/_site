@@ -161,6 +161,7 @@
 		var columnWidth = item_width + offset;
 		var containerWidth = $(window).width();
 		var columns = Math.floor( (containerWidth + offset) / columnWidth );
+	  	columns = Math.min(columns, 4);
 		var nav = $(".nav");
 		nav.width((columns * columnWidth) + "px");
 		nav.css("visibility", "visible");
@@ -181,6 +182,7 @@
 			var columnWidth = item_width + offset;
 			var containerWidth = $(window).width();
 			var columns = Math.floor( (containerWidth + offset) / columnWidth );
+		  	columns = Math.min(columns, 4);
 			var nav = $(".nav");
 			nav.width((columns * columnWidth) + "px");
 
