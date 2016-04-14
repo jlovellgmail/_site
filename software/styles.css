@@ -12,6 +12,12 @@ a {
 a:visited {
 	color: inherit;
 }
+.pagelink {
+    color: rgba(0,150,255, 1);
+}
+a:visited.pagelink {
+    color: rgba(0,150,255, 1);
+}
 .thumbscol {
 	display: inline-block;
 }
